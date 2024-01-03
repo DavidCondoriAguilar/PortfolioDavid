@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Enero 2023 - Presente",
+    title: "Tienda de E-commerce",
+    description:
+      "Desarrollo de una plataforma de comercio electrónico para una variedad de productos, incluyendo electrónicos, moda y accesorios.",
+    link: "https://www.tiendaejemplo.com",
+  },
+  {
+    date: "Agosto 2022 - Diciembre 2022",
+    title: "Página web estática para emprendimiento de alimentos saludables",
+    description:
+      "Creación de un sitio web informativo y atractivo para promocionar y vender productos de alimentación saludable, con énfasis en la dieta vegana y sin gluten.",
+    link: "https://www.alimentosaludablesejemplo.com",
+  },
+  {
+    date: "Marzo 2022 - Julio 2022",
+    title: "Plataforma web para servicios profesionales",
+    description:
+      "Diseño y desarrollo de un sitio web interactivo para promocionar y ofrecer servicios profesionales, como consultoría empresarial y asesoramiento financiero.",
+    link: "https://www.serviciosprofesionalesejemplo.com",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
