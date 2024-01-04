@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/DavidCondoriAguilar/PortfolioDavid.git",
   "name": "former-flare",
+  "homepage": "https://DavidCondoriAguilar.github.io/PortfolioDavid/build",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,12 +9,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build&&gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/onest": "^5.0.2",
     "astro": "^4.0.9",
+    "react-type-animation": "^3.2.0",
+    "react-typed": "^1.2.0",
+    "scrollreveal": "^4.0.9",
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {

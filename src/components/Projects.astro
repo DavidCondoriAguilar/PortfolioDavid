@@ -46,6 +46,7 @@
       icon: Angular,
     },
   };
+
   const PROJECTS = [
     {
       title: "Project 1",
@@ -75,12 +76,14 @@
       tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
     },
   ];
+
+  
   ---
 
   {
     PROJECTS.map(({ title, description, tags, image, github}) => (
-      <article class="mt-5 ">
-        <div class="flex flex-row gap-x-4">
+      <article class="mt-5 " >
+        <div class="flex flex-row gap-x-4" data-scroll-reveal>
           <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
         <SocialPill href={github}>
           <GitHub  class="size-6 text-white cursor-pointer">
@@ -88,9 +91,9 @@
           </GitHub>
         </SocialPill>
           </div> 
-        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <p class="text-lg mb-4 text-pretty" data-scroll-reveal>{description}</p>
         
-        <ul class="py-2 flex gap-x-4 flex-row">
+        <ul class="py-2 flex gap-x-4 flex-row" data-scroll-reveal>
           {tags.map((tag) => (
             <li>
               <span
@@ -108,6 +111,7 @@
           class="rounded"
           src={image}
           alt={"Captura de pantalla del proyecto ${image}"}
+          data-scroll-reveal
         />
       </article>
     ))

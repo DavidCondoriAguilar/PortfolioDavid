@@ -20,6 +20,7 @@ import Footer from "../components/Footer.astro";
     <SectionContainer class="h-auto" id="inicio">
       <h1
         class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5"
+        data-scroll-reveal
       >
         Hey soy David <a
           href="https://www.linkedin.com/in/david-condori-aguilar/"
@@ -30,15 +31,18 @@ import Footer from "../components/Footer.astro";
           <Badge />
         </a>
       </h1>
-      <h2 class="text-[16px] lg:text-[21px] text-pretty">
+      <h2 class="text-[16px] lg:text-[21px] text-pretty" data-scroll-reveal>
         Desarrollador web. De Lima Perú <span class="text-yellow-200/90"
           >Mi objetivo es ofrecer resultados atractivos</span
         >,seguros y escalables para cada proyecto en el que trabajo. <span
           class="text-red-200/90">Ya sea que esté desarrollando</span
         > o creando interfaces de usuario atractivas.
       </h2>
-      
-      <nav class="flex flex-wrap gap-y-3 gap-x-2 lg:gap-x-4 mt-10 py-4 lg:py-14 w-[380px] lg:w-full ">
+
+      <nav
+        class="flex flex-wrap gap-y-3 gap-x-2 lg:gap-x-4 mt-10 py-4 lg:py-14 w-[380px] lg:w-full"
+        data-scroll-reveal
+      >
         <SocialPill href="https://www.linkedin.com/in/david-condori-aguilar/">
           <LinkedIn class="size-6 text-white" />
            LinkedIn
@@ -51,24 +55,28 @@ import Footer from "../components/Footer.astro";
           <MailTo class="size-6 text-white" />
            Gmail
         </SocialPill>
-        <SocialPill href="https://drive.google.com/drive/folders/19ewA4QhvjsmLUTyxkDDaihu-xVlc86qU?usp=sharing">
+        <SocialPill
+          href="https://drive.google.com/drive/folders/19ewA4QhvjsmLUTyxkDDaihu-xVlc86qU?usp=sharing"
+        >
           <Resume class="size-6 text-white" />
            Resume
         </SocialPill>
       </nav>
     </SectionContainer>
 
-    <SectionContainer class="" id="experiencia">
-      <h2 class="text-2xl font-semibold py-5 flex gap-x-2 items-center">
-        <BriefCase class="size-7" />
+    <SectionContainer class="" id="experiencia" data-scroll-reveal>
+      <h2 class="text-2xl font-semibold py-5 flex gap-x-2 items-center" data-scroll-reveal>
+        <BriefCase class="size-7" data-scroll-reveal/>
          Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer class="" id="proyectos">
-      <h2 class="text-2xl mb-14 font-semibold  flex gap-x-2 items-center">
-        <Code class="size-7 " />
+    <SectionContainer class="" id="proyectos" data-scroll-reveal>
+      <h2
+        class="text-2xl mb-14 font-semibold data-scroll-reveal flex gap-x-2 items-center" data-scroll-reveal
+      >
+        <Code class="size-7" data-scroll-reveal/>
          Proyectos
       </h2>
       <Projects />
@@ -76,3 +84,15 @@ import Footer from "../components/Footer.astro";
   </main>
   <Footer />
 </Layout>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal("[data-scroll-reveal]", {
+    delay: 200,
+    distance: "50px",
+    origin: "bottom",
+    easing: "ease-in-out",
+    interval: 100,
+  });
+</script>
