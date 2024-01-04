@@ -1,63 +1,114 @@
----
-import Reactt from "./icons/React.astro";
-import Tailwind from "./icons/TailwindCSS.astro";
-import Bootstrap from "./icons/Bootstrap.astro";
-import CSS from "./icons/Css.astro";
+  ---
+  import Reactt from "./icons/React.astro";
+  import Tailwind from "./icons/TailwindCSS.astro";
+  import Bootstrap from "./icons/Bootstrap.astro";
+  import CSS from "./icons/Css.astro";
+  import Html from "./icons/Html.astro";
+  import Vite from "./icons/Vite.astro";
+  import Angular from "./icons/Angular.astro";
+  import GitHub from "../components/icons/GitHub.astro";
+  import SocialPill from "../components/icons/SocialPill.astro";
 
-const TAGS = {
-  REACT: {
-    name: "React",
-    class: "bg-black text-white",
-    icon: Reactt,
-  },
-  TAILWIND: {
-    name: "TailwindCSS",
-    class: "bg-black text-white",
-    icon: Tailwind,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    class: "bg-black text-white",
-    icon: Bootstrap,
-  },
-  CSS: {
-    name: "Css",
-    class: "bg-black text-white",
-    icon: CSS,
-  },
-};
-const PROJECTS = [
+  const TAGS = {
+    REACT: {
+      name: "React",
+      class: "bg-black text-white",
+      icon: Reactt,
+    },
+    TAILWIND: {
+      name: "TailwindCSS",
+      class: "bg-black text-white",
+      icon: Tailwind,
+    },
+    BOOTSTRAP: {
+      name: "Bootstrap",
+      class: "bg-black text-white",
+      icon: Bootstrap,
+    },
+    CSS: {
+      name: "Css",
+      class: "bg-black text-white",
+      icon: CSS,
+    },
+    HTML: {
+      name: "Html",
+      class: "bg-black text-white",
+      icon: Html,
+    },
+    VITE: {
+      name: "Vite",
+      class: "bg-black text-white",
+      icon: Vite,
+    },
+    ANGULAR: {
+      name: "Angular",
+      class: "bg-black text-white",
+      icon: Angular,
+    },
+  };
+  const PROJECTS = [
+    {
+      title: "Project 1",
+      description:
+      "Un proyecto React con Vite y Bootstrap para gestionar un CRUD en una tienda en línea. Permite crear, leer, actualizar y eliminar productos de manera ágil y amigable. La combinación de Vite y Bootstrap asegura una experiencia rápida y adaptable para administrar la tienda en React.",
+      link: "#",
+      github: "https://github.com/DavidCondoriAguilar/ReactCRUD/tree/main",
+      image: "images/reactEcommerce.webp",
+      tags: [TAGS.VITE, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
+    },
+    {
+      title: "Project 2",
+      description:
+      "Proyecto Angular con Bootstrap: gestión de datos eficiente con CRUD y búsqueda. Una combinación robusta para una experiencia fluida y poderosa en la administración de datos.",
+      link: "#",
+      github: "https://github.com/DavidCondoriAguilar/Angular-CRUD",
+      image: "images/angularCRUD.webp",
+      tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
+    },
+    {
+      title: "Project 3",
+      description:
+        "Una landing estática, responsive y atractiva hecha con React y Tailwind CSS. Utiliza Grid para una distribución visual y cumple con buenas prácticas de desarrollo frontend, garantizando una experiencia adaptable en diferentes dispositivos.",
+      link: "#",
+      github: "https://github.com/DavidCondoriAguilar/Practicas-Manyare",
+      image: "images/tailwindLayout.webp",
+      tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+    },
+  ];
+  ---
+
   {
-    tittle: "Project 1",
-    description: "Lorem imspun dolir amet, consectuter adicpiscing elit",
-    link: "#",
-    github: "#",
-    image: "images/portFolio.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.BOOTSTRAP, TAGS.CSS],
-  },
-];
----
-
-{
-  PROJECTS.map(({ tittle, description, tags, image }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{tittle}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="py-2 flex gap-x-4 flex-row">
-        {tags.map((tag) => (
-          <li>
-            <span class={"flex gap-x-1 lg:gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center text-pretty"}>
-              <tag.icon class="size-6 " />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded"
-        src={image}
-        alt={"Captura de pantalla del proyecto ${image}"}
-      />
-    </article>
-  ))
-}
+    PROJECTS.map(({ title, description, tags, image, github}) => (
+      <article class="mt-5 ">
+        <div class="flex flex-row gap-x-4">
+          <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <SocialPill href={github}>
+          <GitHub  class="size-6 text-white cursor-pointer">
+            
+          </GitHub>
+        </SocialPill>
+          </div> 
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        
+        <ul class="py-2 flex gap-x-4 flex-row">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={
+                  "flex flex-wrap gap-x-1 lg:gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center text-pretty"
+                }
+              >
+                <tag.icon class="size-6 " />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded"
+          src={image}
+          alt={"Captura de pantalla del proyecto ${image}"}
+        />
+      </article>
+    ))
+  }

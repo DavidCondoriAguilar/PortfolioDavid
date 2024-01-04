@@ -5,20 +5,22 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import MailTo from "../components/icons/Mail.astro";
+import Resume from "../components/icons/Resume.astro";
+
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
-
 ---
 
 <Layout title="Portfolio de David- Desarrollador y Programador Web">
-  <main class="px-4">
-
+  <main class="px-4 w-[400px] lg:w-auto">
     <SectionContainer class="h-auto" id="inicio">
-      <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5">
+      <h1
+        class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5"
+      >
         Hey soy David <a
           href="https://www.linkedin.com/in/david-condori-aguilar/"
           class="flex justify-center items-center"
@@ -35,8 +37,8 @@ import Footer from "../components/Footer.astro";
           class="text-red-200/90">Ya sea que esté desarrollando</span
         > o creando interfaces de usuario atractivas.
       </h2>
-      <nav class="flex gap-x-2 lg:gap-x-4 mt-10 py-8 lg:py-14">
-
+      
+      <nav class="flex flex-wrap gap-y-3 gap-x-2 lg:gap-x-4 mt-10 py-4 lg:py-14 w-[380px] lg:w-full ">
         <SocialPill href="https://www.linkedin.com/in/david-condori-aguilar/">
           <LinkedIn class="size-6 text-white" />
            LinkedIn
@@ -49,9 +51,11 @@ import Footer from "../components/Footer.astro";
           <MailTo class="size-6 text-white" />
            Gmail
         </SocialPill>
+        <SocialPill href="https://drive.google.com/drive/folders/19ewA4QhvjsmLUTyxkDDaihu-xVlc86qU?usp=sharing">
+          <Resume class="size-6 text-white" />
+           Resume
+        </SocialPill>
       </nav>
-
-
     </SectionContainer>
 
     <SectionContainer class="" id="experiencia">
@@ -63,15 +67,12 @@ import Footer from "../components/Footer.astro";
     </SectionContainer>
 
     <SectionContainer class="" id="proyectos">
-      <h2 class="text-2xl font-semibold py-5 flex gap-x-2 items-center">
-        <Code class="size-7" />
+      <h2 class="text-2xl mb-14 font-semibold  flex gap-x-2 items-center">
+        <Code class="size-7 " />
          Proyectos
       </h2>
       <Projects />
     </SectionContainer>
-
   </main>
-  
-  <Footer/>
-  
+  <Footer />
 </Layout>
