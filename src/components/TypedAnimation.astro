@@ -1,0 +1,68 @@
+---
+title: "Animación de Typed Text"
+---
+
+<!-- Contenedor para el texto animado -->
+<div class="h-[30px]">
+  <span id="typed-text" class="text-3xl font-bold"></span>
+</div>
+
+<script>
+  // Array con las palabras que se van a mostrar
+  const words = ['Diseñador Web', 'Desarrollador Web', 'Freelancer'];
+
+  // Variables de control
+  let wordIndex = 0; // Índice de la palabra actual en el array
+  let letterIndex = 0; // Índice de la letra actual en la palabra
+  const speed = 100; // Velocidad en milisegundos entre cada letra
+
+  // Función para escribir las letras de la palabra actual
+  function typeWriter() {
+    const currentWord = words[wordIndex]; // Obtiene la palabra actual
+
+    // Verifica si aún quedan letras por escribir en la palabra actual
+    if (letterIndex < currentWord.length) {
+      appendLetter(currentWord.charAt(letterIndex)); // Añade la letra al texto
+      letterIndex++; // Avanza al siguiente índice de letra
+      setTimeout(typeWriter, speed); // Llama a typeWriter de nuevo después de un intervalo
+    } else {
+      setTimeout(eraseText, speed * 3); // Espera antes de borrar la palabra
+    }
+  }
+
+  // Función para borrar las letras escritas
+  function eraseText() {
+    const currentText = document.getElementById('typed-text').textContent;
+
+    // Verifica si aún hay letras para borrar
+    if (currentText.length > 0) {
+      removeLetter(); // Elimina la última letra del texto
+      setTimeout(eraseText, speed); // Llama a eraseText de nuevo después de un intervalo
+    } else {
+      wordIndex = (wordIndex + 1) % words.length; // Avanza al siguiente índice de palabra
+      letterIndex = 0; // Reinicia el índice de letra
+      setTimeout(typeWriter, speed); // Comienza a escribir la siguiente palabra
+    }
+  }
+
+  // Función para añadir una letra al texto
+  function appendLetter(letter) {
+    document.getElementById('typed-text').textContent += letter;
+  }
+
+  // Función para eliminar la última letra del texto
+  function removeLetter() {
+    const currentText = document.getElementById('typed-text').textContent;
+    document.getElementById('typed-text').textContent = currentText.slice(0, -1);
+  }
+
+  // Comienza la animación al cargar la página
+  window.onload = function () {
+    typeWriter();
+  };
+</script>
+
+<style>
+  /* Estilos adicionales con Tailwind CSS */
+  /* Puedes agregar clases de Tailwind aquí si necesitas estilos específicos */
+</style>

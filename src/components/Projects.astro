@@ -1,118 +1,128 @@
-  ---
-  import Reactt from "./icons/React.astro";
-  import Tailwind from "./icons/TailwindCSS.astro";
-  import Bootstrap from "./icons/Bootstrap.astro";
-  import CSS from "./icons/Css.astro";
-  import Html from "./icons/Html.astro";
-  import Vite from "./icons/Vite.astro";
-  import Angular from "./icons/Angular.astro";
-  import GitHub from "../components/icons/GitHub.astro";
-  import SocialPill from "../components/icons/SocialPill.astro";
+---
+import Reactt from "./icons/React.astro";
+import Tailwind from "./icons/TailwindCSS.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import CSS from "./icons/Css.astro";
+import Html from "./icons/Html.astro";
+import Vite from "./icons/Vite.astro";
+import Angular from "./icons/Angular.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import Code from "./icons/Code.astro";
+import Badge from "./Badge.astro";
 
-  const TAGS = {
-    REACT: {
-      name: "React",
-      class: "bg-black text-white",
-      icon: Reactt,
-    },
-    TAILWIND: {
-      name: "TailwindCSS",
-      class: "bg-black text-white",
-      icon: Tailwind,
-    },
-    BOOTSTRAP: {
-      name: "Bootstrap",
-      class: "bg-black text-white",
-      icon: Bootstrap,
-    },
-    CSS: {
-      name: "Css",
-      class: "bg-black text-white",
-      icon: CSS,
-    },
-    HTML: {
-      name: "Html",
-      class: "bg-black text-white",
-      icon: Html,
-    },
-    VITE: {
-      name: "Vite",
-      class: "bg-black text-white",
-      icon: Vite,
-    },
-    ANGULAR: {
-      name: "Angular",
-      class: "bg-black text-white",
-      icon: Angular,
-    },
-  };
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: Reactt,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-black text-white",
+    icon: Bootstrap,
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-black text-white",
+    icon: CSS,
+  },
+  HTML: {
+    name: "Html",
+    class: "bg-black text-white",
+    icon: Html,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-white",
+    icon: Vite,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-black text-white",
+    icon: Angular,
+  },
+};
 
-  const PROJECTS = [
-    {
-      title: "Project 1",
-      description:
-      "Un proyecto React con Vite y Bootstrap para gestionar un CRUD en una tienda en línea. Permite crear, leer, actualizar y eliminar productos de manera ágil y amigable. La combinación de Vite y Bootstrap asegura una experiencia rápida y adaptable para administrar la tienda en React.",
-      link: "#",
-      github: "https://github.com/DavidCondoriAguilar/ReactCRUD/tree/main",
-      image: "images/reactEcommerce.webp",
-      tags: [TAGS.VITE, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
-    },
-    {
-      title: "Project 2",
-      description:
-      "Proyecto Angular con Bootstrap: gestión de datos eficiente con CRUD y búsqueda. Una combinación robusta para una experiencia fluida y poderosa en la administración de datos.",
-      link: "#",
-      github: "https://github.com/DavidCondoriAguilar/Angular-CRUD",
-      image: "images/angularCRUD.webp",
-      tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
-    },
-    {
-      title: "Project 3",
-      description:
-        "Una landing estática, responsive y atractiva hecha con React y Tailwind CSS. Utiliza Grid para una distribución visual y cumple con buenas prácticas de desarrollo frontend, garantizando una experiencia adaptable en diferentes dispositivos.",
-      link: "#",
-      github: "https://github.com/DavidCondoriAguilar/Practicas-Manyare",
-      image: "images/tailwindLayout.webp",
-      tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
-    },
-  ];
-
-  
-  ---
-
+const PROJECTS = [
   {
-    PROJECTS.map(({ title, description, tags, image, github}) => (
-      <article class="mt-5 " >
-        <div class="flex flex-row gap-x-4" data-scroll-reveal>
-          <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-        <SocialPill href={github}>
-          <GitHub  class="size-6 text-white cursor-pointer">
-            
-          </GitHub>
-        </SocialPill>
-          </div> 
-        <p class="text-lg mb-4 text-pretty" data-scroll-reveal>{description}</p>
-        
-        <ul class="py-2 flex gap-x-4 flex-row" data-scroll-reveal>
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={
-                  "flex flex-wrap gap-x-1 lg:gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center text-pretty"
-                }
-              >
-                <tag.icon class="size-6 " />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+    title: "Project 1",
+    description:
+      "Un proyecto React con Vite y Bootstrap para gestionar un CRUD en una tienda en línea. Permite crear, leer, actualizar y eliminar productos de manera ágil y amigable. La combinación de Vite y Bootstrap asegura una experiencia rápida y adaptable para administrar la tienda en React.",
+    link: "#",
+    github: "https://github.com/DavidCondoriAguilar/ReactCRUD/tree/main",
+    image: "images/reactEcommerce.webp",
+    tags: [TAGS.VITE, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
+  },
+  {
+    title: "Project 2",
+    description:
+      "Proyecto Angular con Bootstrap: gestión de datos eficiente con CRUD y búsqueda. Una combinación robusta para una experiencia fluida y poderosa en la administración de datos.",
+    link: "#",
+    github: "https://github.com/DavidCondoriAguilar/Angular-CRUD",
+    image: "images/angularCRUD.webp",
+    tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP, TAGS.CSS, TAGS.HTML],
+  },
+  {
+    title: "Project 3",
+    description:
+      "Una landing estática, responsive y atractiva hecha con React y Tailwind CSS. Utiliza Grid para una distribución visual y cumple con buenas prácticas de desarrollo frontend, garantizando una experiencia adaptable en diferentes dispositivos.",
+    link: "#",
+    github: "https://github.com/DavidCondoriAguilar/Practicas-Manyare",
+    image: "images/tailwindLayout.webp",
+    tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image, github }) => (
+    <article class="mt-5 relative ">
+      <div class="flex flex-row gap-x-4" data-scroll-reveal>
+        <h3 class="text-[20px] lg:text-2xl font-semibold text-yellow-200 mb-2">
+          {title}
+        </h3>
+      </div>
+      <p class="text-[16px] lg:text-[18px] mb-4 text-pretty" data-scroll-reveal>
+        {description}
+      </p>
+
+      <ul class="py-2 flex gap-x-4 flex-wrap " data-scroll-reveal>
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={
+                "flex flex-wrap gap-x-1 lg:gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center text-pretty"
+              }
+            >
+              <tag.icon class="size-6 " />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <div class="relative group" data-scroll-reveal>
         <img
           class="rounded"
           src={image}
           alt={"Captura de pantalla del proyecto ${image}"}
           data-scroll-reveal
         />
-      </article>
-    ))
-  }
+
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity rounded flex items-center justify-center duration-700">
+          <SocialPill href={github}>
+            <button class=" ">
+              <Code class="  cursor-pointer  py-2 px-4 rounded-md text-red-500  " />
+            </button>
+          </SocialPill>
+        </div>
+      </div>
+    </article>
+  ))
+}
