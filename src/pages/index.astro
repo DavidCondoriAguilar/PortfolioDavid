@@ -20,30 +20,22 @@ import TypedAnimation from "../components/TypedAnimation.astro";
 <Layout title="Portfolio de David- Desarrollador y Programador Web">
   <main class="px-4 w-[400px] lg:w-auto">
     <SectionContainer class="h-auto" id="inicio">
-      
-      <span class="flex flex-col items-start  ">
-
+      <span class="flex flex-col items-start">
         <h1
-        class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5"
-        data-scroll-reveal
-      >
-        <TypedAnimation/>
-        
-      </h1>
-      <a
-      href="https://www.linkedin.com/in/david-condori-aguilar/"
-      class="flex justify-center items-center py-4"
-      target="_blank"
-      rel="noopener"
-    >
-      <Badge />
-    </a>
-      
-
+          class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5"
+          data-scroll-reveal
+        >
+          <TypedAnimation />
+        </h1>
+        <a
+          href="https://www.linkedin.com/in/david-condori-aguilar/"
+          class="flex justify-center items-center py-4"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge />
+        </a>
       </span>
-      
-
-      
 
       <h2 class="text-[16px] lg:text-[21px] text-pretty" data-scroll-reveal>
         Desarrollador web. De Lima Perú <span class="text-yellow-200/90"
@@ -59,49 +51,52 @@ import TypedAnimation from "../components/TypedAnimation.astro";
       >
         <SocialPill href="https://www.linkedin.com/in/david-condori-aguilar/">
           <LinkedIn class="size-6 text-white" />
-           LinkedIn
+          LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/DavidCondoriAguilar">
           <GitHub class="size-6 text-white" />
-           GitHub
+          GitHub
         </SocialPill>
         <SocialPill href="mailto:davids.condori.aguilar@gmail.com">
           <MailTo class="size-6 text-white" />
-           Gmail
+          Gmail
         </SocialPill>
         <SocialPill
           href="https://drive.google.com/drive/folders/19ewA4QhvjsmLUTyxkDDaihu-xVlc86qU?usp=sharing"
         >
           <Resume class="size-6 text-white" />
-           Resume
+          Resume
         </SocialPill>
       </nav>
     </SectionContainer>
 
     <SectionContainer class="" id="experiencia" data-scroll-reveal>
-      <h2 class="text-2xl font-semibold py-5 flex gap-x-2 items-center" data-scroll-reveal>
-        <BriefCase class="size-7" data-scroll-reveal/>
-         Estudios
+      <h2
+        class="text-2xl font-semibold py-5 flex gap-x-2 items-center"
+        data-scroll-reveal
+      >
+        <BriefCase class="size-7" data-scroll-reveal />
+        Estudios
       </h2>
-      <Experience data-scroll-reveal/>
+      <Experience data-scroll-reveal />
     </SectionContainer>
 
-      <SectionContainer class="" id="proyectos" data-scroll-reveal>
-        <h2
-          class="text-2xl mb-14 font-semibold data-scroll-reveal flex gap-x-2 items-center" data-scroll-reveal
-        >
-          <Code class="size-7" data-scroll-reveal/>
-           Proyectos
-        </h2>
-        <Projects />
-      </SectionContainer>
+    <SectionContainer class="" id="proyectos" data-scroll-reveal>
+      <h2
+        class="text-2xl mb-14 font-semibold data-scroll-reveal flex gap-x-2 items-center"
+        data-scroll-reveal
+      >
+        <Code class="size-7" data-scroll-reveal />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
 
     <!-- <SectionContainer  data-scroll-reveal>
       <Acordition/>
     </SectionContainer> -->
-    
   </main>
-  <Footer/>
+  <Footer />
 </Layout>
 
 <script>
@@ -116,7 +111,4 @@ import TypedAnimation from "../components/TypedAnimation.astro";
   });
 </script>
 
-<style>
-
-
-</style>
+<style></style>
