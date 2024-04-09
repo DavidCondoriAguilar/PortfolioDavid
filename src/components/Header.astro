@@ -40,21 +40,21 @@
       >
         <li>
           <a
-            href="#top"
+            href="/#top"
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent  transition"
             >Inicio</a
           >
         </li>
         <li>
           <a
-            href="#experiencia"
+            href="/#experiencia"
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition"
             >Experiencia</a
           >
         </li>
         <li>
           <a
-            href="#proyectos"
+            href="/#proyectos"
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition"
             >Proyectos</a
           >
@@ -67,13 +67,12 @@
 <script>
   // Obtener referencias al botón y al menú
   const toggleBtn = document.getElementById('toggle-btn');
-  const menu = document.getElementById('navbar-default');
+const menu = document.getElementById('navbar-default');
 
-  // Función para alternar la visibilidad del menú
-  function toggleMenu() {
-      menu.classList.toggle('hidden'); // Alternar la clase 'hidden'
-  }
+function toggleMenu() {
+    menu.classList.toggle('hidden');
+}
 
-  // Event listener para el clic en el botón
-  toggleBtn.addEventListener('click', toggleMenu);
+toggleBtn.addEventListener('click', toggleMenu);
+
 </script>
