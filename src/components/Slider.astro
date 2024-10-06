@@ -1,0 +1,30 @@
+---
+import Css from "./icons/Css.astro";
+import GitHub from "./icons/GitHub.astro";
+import Html from "./icons/Html.astro";
+import React from "./icons/React.astro";
+import TailwindCSS from "./icons/TailwindCSS.astro";
+import Vite from "./icons/Vite.astro";
+
+---
+
+<section
+      class="w-full max-w-3xl overflow-hidden select-none bg-[#ffffff00]"
+      style={{
+        WebkitMask:
+          "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
+        mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
+      }}
+    >
+      <div class="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
+        <div class="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
+          <Css class="size-20 object-contain"/>
+          <GitHub class="size-20 object-contain" />
+          <Html class="size-20 object-contain"/>
+          <React class="size-20 object-contain"/>
+          <Vite class="size-20 object-contain"/>
+          <TailwindCSS class="size-20 object-contain"/>
+          
+        </div>
+      </div>
+    </section>
