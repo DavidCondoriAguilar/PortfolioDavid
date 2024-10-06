@@ -2,29 +2,72 @@
 import Css from "./icons/Css.astro";
 import GitHub from "./icons/GitHub.astro";
 import Html from "./icons/Html.astro";
+import Java from "./icons/Java.astro";
 import React from "./icons/React.astro";
 import TailwindCSS from "./icons/TailwindCSS.astro";
 import Vite from "./icons/Vite.astro";
+import Springboot from "./icons/Springboot.astro";
+import Astro from "./icons/Astro.astro";
+import Csharp from "./icons/Astro.astro";
+import Angular from "./icons/Angular.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+
+
+
 
 ---
 
-<section
-      class="w-full max-w-3xl overflow-hidden select-none bg-[#ffffff00]"
-      style={{
-        WebkitMask:
-          "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
-        mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
-      }}
-    >
-      <div class="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
-        <div class="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
-          <Css class="size-20 object-contain"/>
-          <GitHub class="size-20 object-contain" />
-          <Html class="size-20 object-contain"/>
-          <React class="size-20 object-contain"/>
-          <Vite class="size-20 object-contain"/>
-          <TailwindCSS class="size-20 object-contain"/>
-          
-        </div>
-      </div>
-    </section>
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Desplazarse al 50% del ancho */
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 5s linear infinite; /* Aumenta o disminuye la duración para ajustar la velocidad */
+  }
+
+  .scroll-container {
+    display: flex;
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    width: 100%; /* Asegúrate de que el contenedor use todo el ancho */
+  }
+
+  .icon-wrapper {
+    display: flex;
+    flex-nowrap: nowrap; /* Asegura que los íconos no se apilen verticalmente */
+    gap: 4rem; /* Espaciado entre íconos */
+  }
+
+  /* Ajusta el tamaño de los íconos aquí */
+  .size-20 {
+    width: 80px; /* Cambia el tamaño a tu preferencia */
+    height: 80px; /* Cambia el tamaño a tu preferencia */
+  }
+</style>
+
+<section class="w-full max-w-3xl overflow-hidden select-none bg-[#ffffff00]">
+  <div class="scroll-container">
+    <div class="icon-wrapper animate-scroll">
+      <Css class="size-20 object-contain" />
+      <GitHub class="size-20 object-contain" />
+      <Html class="size-20 object-contain" />
+      <React class="size-20 object-contain" />
+      <Vite class="size-20 object-contain" />
+      <TailwindCSS class="size-20 object-contain" />
+      
+      
+      <Java class="size-20 object-contain" />
+      <Springboot class="size-20 object-contain" />
+      <!-- <Astro class="size-20 object-contain" /> -->
+      <!-- <Csharp class="size-20 object-contain" /> -->
+      <Angular class="size-20 object-contain" />
+      <Bootstrap class="size-20 object-contain" />
+
+    </div>
+  </div>
+</section>
